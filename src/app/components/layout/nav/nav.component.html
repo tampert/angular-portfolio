@@ -15,7 +15,12 @@
         <button mat-menu-item [matMenuTriggerFor]="git">git</button>
       </mat-menu>
       <mat-menu #javascript="matMenu">
-        <a mat-button href="coding">games</a>
+        <!-- <a mat-button href="coding">games</a> -->
+        <button mat-menu-item [matMenuTriggerFor]="games">javascript</button>
+        <button mat-menu-item>examples</button>
+      </mat-menu>
+      <mat-menu #games="matMenu">
+        <a mat-button href="coding/snake">snake</a>
         <button mat-menu-item>examples</button>
       </mat-menu>
       <mat-menu #python="matMenu">

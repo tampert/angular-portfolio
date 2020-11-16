@@ -18,8 +18,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { NavComponent } from './components/layout/nav/nav.component';
+import { MatMenuModule } from '@angular/material/menu';
 
-import {MatMenuModule} from '@angular/material/menu';
+import { SnakeComponent } from './components/games/snake/snake.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,8 @@ import {MatMenuModule} from '@angular/material/menu';
     AboutComponent,
     CodingComponent,
     PageNotFoundComponent,
-    NavComponent
+    NavComponent,
+    SnakeComponent
   ],
   imports: [
     BrowserModule,
