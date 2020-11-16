@@ -1,0 +1,47 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="">home</a>
+      <a mat-list-item href="about">about</a>
+      <a mat-list-item [matMenuTriggerFor]="menu">coding</a>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="javascript">javascript</button>
+        <button mat-menu-item [matMenuTriggerFor]="python">python</button>
+        <button mat-menu-item [matMenuTriggerFor]="docker">docker</button>
+        <button mat-menu-item [matMenuTriggerFor]="git">git</button>
+      </mat-menu>
+      <mat-menu #javascript="matMenu">
+        <a mat-button href="coding">games</a>
+        <button mat-menu-item>examples</button>
+      </mat-menu>
+      <mat-menu #python="matMenu">
+        <button mat-menu-item>t.b.d.</button>
+      </mat-menu>
+      <mat-menu #docker="matMenu">
+        <button mat-menu-item>t.b.d.</button>
+      </mat-menu>
+      <mat-menu #git="matMenu">
+        <button mat-menu-item>Birds</button>
+      </mat-menu>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>angular-portfolio</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
