@@ -19,8 +19,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { NavComponent } from './components/layout/nav/nav.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
+
 
 import { SnakeComponent } from './components/games/snake/snake.component';
+import { PacManComponent } from './components/games/pac-man/pac-man.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import { SnakeComponent } from './components/games/snake/snake.component';
     CodingComponent,
     PageNotFoundComponent,
     NavComponent,
-    SnakeComponent
+    SnakeComponent,
+    PacManComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +49,7 @@ import { SnakeComponent } from './components/games/snake/snake.component';
     MatIconModule,
     MatListModule,
     MatMenuModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

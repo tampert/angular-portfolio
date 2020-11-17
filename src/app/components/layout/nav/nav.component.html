@@ -6,8 +6,8 @@
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item href="">home</a>
-      <a mat-list-item href="about">about</a>
       <a mat-list-item [matMenuTriggerFor]="menu">coding</a>
+      <a mat-list-item href="about">about</a>
       <mat-menu #menu="matMenu">
         <button mat-menu-item [matMenuTriggerFor]="javascript">javascript</button>
         <button mat-menu-item [matMenuTriggerFor]="python">python</button>
@@ -20,7 +20,8 @@
         <button mat-menu-item>examples</button>
       </mat-menu>
       <mat-menu #games="matMenu">
-        <a mat-button href="coding/snake">snake</a>
+        <a mat-menu-item href="coding/snake">snake</a>
+        <a mat-menu-item href="coding/pacman">pacman</a>
         <button mat-menu-item>examples</button>
       </mat-menu>
       <mat-menu #python="matMenu">

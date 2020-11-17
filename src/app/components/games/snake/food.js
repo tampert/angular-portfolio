@@ -10,7 +10,6 @@ export function update() {
         expandSnake(EXPANSION_RATE)
         food = getRandomFoodPosition()
     }
-
 }
 
 export function draw(gameBoard) {
@@ -28,6 +27,5 @@ function getRandomFoodPosition() {
         newFoodPosition = randomGridPosition()
         console.log(newFoodPosition)
     }
-
     return newFoodPosition
 }
