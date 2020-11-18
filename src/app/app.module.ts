@@ -24,6 +24,8 @@ import { MatCardModule } from '@angular/material/card';
 
 import { SnakeComponent } from './components/games/snake/snake.component';
 import { PacManComponent } from './components/games/pac-man/pac-man.component';
+import { StoreModule } from '@ngrx/store';
+import { HeroesComponent } from './components/games/heroes/heroes.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { PacManComponent } from './components/games/pac-man/pac-man.component';
     NavComponent,
     SnakeComponent,
     PacManComponent,
+    HeroesComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +53,7 @@ import { PacManComponent } from './components/games/pac-man/pac-man.component';
     MatListModule,
     MatMenuModule,
     MatCardModule,
+    StoreModule.forRoot({}, {}),
   ],
   providers: [],
   bootstrap: [AppComponent]
