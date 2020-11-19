@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,11 +22,11 @@ import { NavComponent } from './components/layout/nav/nav.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
 
-
 import { SnakeComponent } from './components/games/snake/snake.component';
 import { PacManComponent } from './components/games/pac-man/pac-man.component';
 import { StoreModule } from '@ngrx/store';
 import { HeroesComponent } from './components/games/heroes/heroes.component';
+import { HeroesDetailComponent } from './components/games/heroes-detail/heroes-detail.component';
 
 @NgModule({
   declarations: [
@@ -39,9 +40,11 @@ import { HeroesComponent } from './components/games/heroes/heroes.component';
     SnakeComponent,
     PacManComponent,
     HeroesComponent,
+    HeroesDetailComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
