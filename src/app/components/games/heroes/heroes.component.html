@@ -1,3 +1,6 @@
+<nav>
+  <a routerLink="heroes-dashboard">Dashboard</a>
+</nav>
 <h2>My Heroes</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes"
@@ -6,6 +9,5 @@
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
-
 <app-heroes-detail [hero]="selectedHero"></app-heroes-detail>
 <app-messages></app-messages>

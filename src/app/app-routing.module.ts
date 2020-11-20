@@ -7,6 +7,7 @@ import { PageNotFoundComponent} from './components/pages/page-not-found/page-not
 import { SnakeComponent } from './components/games/snake/snake.component'
 import { PacManComponent } from './components/games/pac-man/pac-man.component'
 import { HeroesComponent } from './components/games/heroes/heroes.component'
+import { HeroesDashboardComponent } from './components/games/heroes-dashboard/heroes-dashboard.component'
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'about', component: AboutComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'coding/snake', component: SnakeComponent},
   { path: 'coding/pacman', component: PacManComponent},
   { path: 'coding/heroes', component: HeroesComponent},
+  { path: 'coding/heroes/heroes-dashboard', component: HeroesDashboardComponent},
   { path: '**', component: PageNotFoundComponent  }
 ];
 

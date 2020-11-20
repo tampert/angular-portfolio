@@ -28,6 +28,7 @@ import { StoreModule } from '@ngrx/store';
 import { HeroesComponent } from './components/games/heroes/heroes.component';
 import { HeroesDetailComponent } from './components/games/heroes-detail/heroes-detail.component';
 import { MessagesComponent } from './components/messages/messages.component';
+import { HeroesDashboardComponent } from './components/games/heroes-dashboard/heroes-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { MessagesComponent } from './components/messages/messages.component';
     PacManComponent,
     HeroesComponent,
     HeroesDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    HeroesDashboardComponent
   ],
   imports: [
     BrowserModule,
