@@ -14,7 +14,10 @@ export class HeroesComponent implements OnInit {
 
   hero:Hero = {
     id:1,
-    name: 'Windstorm'
+    name: 'Windstorm',
+    localized_name: 'joo',
+    icon: '', 
+    img: ''
   }
 
   constructor(private heroService:HeroService, private messageService:MessagesService) { }
@@ -25,7 +28,9 @@ export class HeroesComponent implements OnInit {
 
   getHeroes():void {
     this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes)
+      .subscribe(heroes => {
+        this.heroes = heroes
+      })
   }
 
   onSelect(hero: Hero): void {

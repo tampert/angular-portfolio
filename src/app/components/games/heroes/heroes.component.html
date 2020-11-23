@@ -7,7 +7,11 @@
     [class.selected]="hero === selectedHero"
     (click)="onSelect(hero)"
     routerLink="/coding/heroes/heroes-detail/{{hero.id}}">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
+    <span class="badge">
+      {{hero.id}}
+    </span>
+    <img src="http://cdn.dota2.com{{hero.icon}}" width="32" height="32" alt="{{hero.localized_name}}" />
+    {{hero.localized_name}}
   </li>
 </ul>
 <!-- <app-heroes-detail [hero]="selectedHero"></app-heroes-detail> -->
