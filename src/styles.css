@@ -22,7 +22,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* PACMAN */
 
-.grid {
+.pacman-grid {
     display: flex;
     flex-wrap: wrap;
     width: 560px;
@@ -30,7 +30,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     border: solid black;
 }
 
-.grid div {
+.pacman-grid div {
     width: 20px;
     height: 20px;
 }

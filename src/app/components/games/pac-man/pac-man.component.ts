@@ -67,7 +67,7 @@ export class PacManComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.grid = document.querySelector('.grid')
+    this.grid = document.querySelector('.pacman-grid')
     this.scoreDisplay = document.getElementById('score')
     this.createBoard()
 

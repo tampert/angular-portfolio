@@ -5,9 +5,10 @@
 <ul class="heroes">
   <li *ngFor="let hero of heroes"
     [class.selected]="hero === selectedHero"
-    (click)="onSelect(hero)">
+    (click)="onSelect(hero)"
+    routerLink="/coding/heroes/heroes-detail/{{hero.id}}">
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
-<app-heroes-detail [hero]="selectedHero"></app-heroes-detail>
+<!-- <app-heroes-detail [hero]="selectedHero"></app-heroes-detail> -->
 <app-messages></app-messages>
