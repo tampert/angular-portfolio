@@ -11,6 +11,7 @@ import { HeroService } from './../../../services/hero.service'
   styleUrls: ['./heroes-detail.component.css']
 })
 export class HeroesDetailComponent implements OnInit {
+  heroes: Hero[];
   hero: Hero;
 
   constructor(
@@ -20,12 +21,23 @@ export class HeroesDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getHero();
+    this.heroService.getHeroes()
+    .subscribe(heroes => {
+      this.heroes = heroes
+      this.getHero();
+    })
+   
   }
+  
 
   getHero():void {
     const id =+ this.route.snapshot.paramMap.get('id');
-    this.heroService.getHero(id).subscribe(hero => this.hero = hero)
+    // this is a quick and dirty sollution
+    let heroAr = this.heroes.filter((hero) => {
+      return hero.id == id
+    })
+    this.hero = heroAr[0];
+    // this.heroService.getHero(id).subscribe(hero => this.hero = hero)
   }
 
   goBack(): void {

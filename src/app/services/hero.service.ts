@@ -21,15 +21,17 @@ export class HeroService {
 
   getHeroes():Observable<Hero[]> {
     this.log('fetched heroes');
-    // return of(HEROES)
+
     return this.http.get<any[]>(this.url).pipe(
-      catchError(this.handleError<any[]>('getHeroes', []))
+      catchError(this.handleError<any[]>('getHeroes', [])),
     )
+    // return of(HEROES)
   }
 
   getHero(id: number): Observable<Hero> {
     // TODO: send the message _after_ fetching the hero
     this.log(`fetched hero id=${id}`);
+    
     return of(HEROES.find(hero => hero.id === id));
     //return null
   }
