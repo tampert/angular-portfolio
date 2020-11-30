@@ -31,6 +31,11 @@ import { HeroesDetailComponent } from './components/games/heroes-detail/heroes-d
 import { MessagesComponent } from './components/messages/messages.component';
 import { HeroesDashboardComponent } from './components/games/heroes-dashboard/heroes-dashboard.component';
 
+// firebase
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireFunctionsModule } from '@angular/fire/functions';
+import { environment } from './../environments/environment';
+import { LoginComponent } from './components/pages/login/login.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +50,8 @@ import { HeroesDashboardComponent } from './components/games/heroes-dashboard/he
     HeroesComponent,
     HeroesDetailComponent,
     MessagesComponent,
-    HeroesDashboardComponent
+    HeroesDashboardComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +68,9 @@ import { HeroesDashboardComponent } from './components/games/heroes-dashboard/he
     MatMenuModule,
     MatCardModule,
     StoreModule.forRoot({}, {}),
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireFunctionsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -21,6 +21,7 @@ export class HeroesDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    // we are getting all heros here. This can be optimised
     this.heroService.getHeroes()
     .subscribe(heroes => {
       this.heroes = heroes
