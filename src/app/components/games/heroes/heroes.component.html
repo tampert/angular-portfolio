@@ -2,7 +2,10 @@
   <a routerLink="heroes-dashboard">Dashboard</a>
 </nav>
 <h2>My Heroes</h2>
-<label>search</label><input type=text [(ngModel)]="keyword" (ngModelChange)="searchHero($event)" />
+<mat-form-field class="example-form-field">
+  <mat-label>search</mat-label>
+  <input matInput type=text [(ngModel)]="keyword" (ngModelChange)="searchHero($event)" />
+</mat-form-field>
 <ul class="heroes">
   <li *ngFor="let hero of filteredHeroes"
     [class.selected]="hero === selectedHero"

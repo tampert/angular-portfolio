@@ -22,6 +22,8 @@ import { MatListModule } from '@angular/material/list';
 import { NavComponent } from './components/layout/nav/nav.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { SnakeComponent } from './components/games/snake/snake.component';
 import { PacManComponent } from './components/games/pac-man/pac-man.component';
@@ -67,6 +69,8 @@ import { LoginComponent } from './components/pages/login/login.component'
     MatListModule,
     MatMenuModule,
     MatCardModule,
+    MatInputModule,
+    MatTabsModule,
     StoreModule.forRoot({}, {}),
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
