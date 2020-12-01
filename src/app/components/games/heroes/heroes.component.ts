@@ -9,8 +9,10 @@ import  { MessagesService } from './../../../services/messages.service'
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
+  keyword:string
   heroes:Hero[];
   selectedHero: Hero;
+  filteredHeroes:Hero[];
 
   hero:Hero = {
     id:1,
@@ -30,7 +32,14 @@ export class HeroesComponent implements OnInit {
     this.heroService.getHeroes()
       .subscribe(heroes => {
         this.heroes = heroes
+        this.filteredHeroes = heroes
       })
+  }
+
+  searchHero(e:KeyboardEvent):void{
+    this.filteredHeroes = this.heroes.filter((hero) => {
+      return hero.localized_name.toLocaleLowerCase().includes(this.keyword)
+    })
   }
 
   onSelect(hero: Hero): void {
