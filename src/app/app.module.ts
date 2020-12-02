@@ -37,7 +37,7 @@ import { HeroesDashboardComponent } from './components/games/heroes-dashboard/he
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireFunctionsModule } from '@angular/fire/functions';
 import { environment } from './../environments/environment';
-import { LoginComponent } from './components/pages/login/login.component'
+import { LoginComponent } from './components/pages/login/login.component';
 @NgModule({
   declarations: [
     AppComponent,

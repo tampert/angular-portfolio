@@ -10,6 +10,7 @@ import { PacManComponent } from './components/games/pac-man/pac-man.component'
 import { HeroesComponent } from './components/games/heroes/heroes.component'
 import { HeroesDashboardComponent } from './components/games/heroes-dashboard/heroes-dashboard.component'
 import { HeroesDetailComponent } from './components/games/heroes-detail/heroes-detail.component'
+import { ExamplesComponent } from './components/javascript/examples/examples.component'
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'about', component: AboutComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'coding/heroes', component: HeroesComponent},
   { path: 'coding/heroes/heroes-dashboard', component: HeroesDashboardComponent},
   { path: 'coding/heroes/heroes-detail/:id', component: HeroesDetailComponent},
+  { path: 'coding/javascript/examples', component: ExamplesComponent},
   { path: '**', component: PageNotFoundComponent  }
 ];
 
